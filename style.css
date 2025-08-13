@@ -1,0 +1,97 @@
+* {
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-family: 'Minecraft';
+}
+
+body {
+    background: #f2f2f2;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'Minecraft';
+    src: url('fonts/Minecraft_1.1.ttf');
+}
+
+@font-face {
+    font-family: 'Faithful';
+    src: url('fonts/Faithful.ttf');
+}
+
+main.menu {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(18px);
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+main.menu h1#title {
+    font-size: 3em;
+    font-family: 'Faithful';
+}
+
+button#start {
+    width: 360px;
+    max-width: 60%;
+    min-height: 42px;
+    background: #f2f2f2;
+    border-radius: 18px;
+    font-size: 1.4em;
+    cursor: pointer;
+    padding: 12px;
+    text-align: center;
+}
+
+div#player {
+    width: 100px;
+    aspect-ratio: 1/1;
+    background-image: url('images/ayana-01.png');
+    background-size: 100% 100%;
+    position: fixed;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.15s ease-out;
+    z-index: 2;
+}
+
+div.map {
+    width: 120%;
+    height: auto;
+    min-height: 1200px;
+    background: red;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12 столбцов */
+    gap: 10px; /* расстояние между квадратами */
+}
+
+div#orientation-warning {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    z-index: 300;
+}
+
+div#orientation-warning p#warning-text {
+    font-size: 0.7em;
+    max-width: 90vw;
+}
