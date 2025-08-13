@@ -23,7 +23,6 @@ document.addEventListener('keyup', (event) => {
 // Функции движения
 function moveLeft() {
     playerPosition[0] -= speed;
-    console.log(playerPosition);
 }
 function moveRight() {
     playerPosition[0] += speed;
@@ -75,7 +74,7 @@ function checkOrientation() {
     warning.style.display = "none"; // альбом — убираем сообщение
     // тут можно запускать игру, если ещё не запущена
   } else {
-    warning.style.display = "none"; // портрет — показываем сообщение
+    warning.style.display = "flex"; // портрет — показываем сообщение
     // тут можно ставить игру на паузу или не запускать
   }
 }
