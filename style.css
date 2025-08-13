@@ -16,13 +16,8 @@ body {
     src: url('fonts/Minecraft_1.1.ttf');
 }
 
-@font-face {
-    font-family: 'Faithful';
-    src: url('fonts/Faithful.ttf');
-}
-
 main.menu {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     backdrop-filter: blur(18px);
     background: rgba(0, 0, 0, 0.8);
@@ -52,10 +47,22 @@ button#start {
     text-align: center;
 }
 
+div.map {
+    width: 120%;
+    height: auto;
+    min-height: 120px;
+    background: black;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12 столбцов */
+    gap: 10px; /* расстояние между квадратами */
+    position: fixed;
+    left: 0; top: 0;
+}
+
 div#player {
     width: 100px;
     aspect-ratio: 1/1;
-    background-image: url('images/ayana-01.png');
+    background-image: url('images/player.png');
     background-size: 100% 100%;
     position: fixed;
     top: 50%; left: 50%;
@@ -64,20 +71,10 @@ div#player {
     z-index: 2;
 }
 
-div.map {
-    width: 120%;
-    height: auto;
-    min-height: 1200px;
-    background: red;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr); /* 12 столбцов */
-    gap: 10px; /* расстояние между квадратами */
-}
-
 div#orientation-warning {
     position: fixed;
     top: 0; left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(12px);
